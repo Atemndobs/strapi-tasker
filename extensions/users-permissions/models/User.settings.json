@@ -28,7 +28,7 @@
     },
     "password": {
       "type": "password",
-      "minLength": 6,
+      "minLength": 4,
       "configurable": false,
       "private": true
     },

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tasks",
+  "info": {
+    "name": "task"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "done": {
+      "type": "boolean"
+    },
+    "created_by": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "user"
+    },
+    "assigned_to": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "tasks",
+      "dominant": true
+    }
+  }
+}
